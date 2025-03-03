@@ -1,0 +1,19 @@
+📂 SudokuGame
+ ├── 📂 src
+ │   ├── 📂 model
+ │   │   ├── SudokuBoard.java
+ │   │   ├── SudokuSolver.java
+ │   │   ├── SudokuGenerator.java
+ │   │   └── Cell.java
+ │   ├── 📂 view
+ │   │   ├── SudokuGUI.java
+ │   │   └── BoardPanel.java
+ │   ├── 📂 controller
+ │   │   ├── GameController.java
+ │   ├── Main.java
+ ├── 📂 test
+ │   ├── SudokuSolverTest.java
+ │   ├── SudokuGeneratorTest.java
+ ├── README.md
+ ├── .gitignore
+ ├── pom.xml (caso use Maven)
