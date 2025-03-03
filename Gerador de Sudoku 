@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class SudokuGenerator {
+    private SudokuBoard board;
+    private Random random = new Random();
+
+    public SudokuGenerator() {
+        board = new SudokuBoard();
+        generatePuzzle();
+    }
+
+    public void generatePuzzle() {
+        // Algoritmo de geração de tabuleiro válido (exemplo simples)
+        for (int i = 0; i < 9; i++) {
+            int num = random.nextInt(9) + 1;
+            board.getBoard()[i][i] = new Cell(num, true);
+        }
+    }
+
+    public SudokuBoard getBoard() {
+        return board;
+    }
+}
