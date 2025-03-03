@@ -1,0 +1,10 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class SudokuSolverTest {
+    @Test
+    public void testSolveSudoku() {
+        SudokuBoard board = new SudokuGenerator().getBoard();
+        assertTrue(SudokuSolver.solve(board));
+    }
+}
