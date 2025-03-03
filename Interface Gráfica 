@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class SudokuGUI extends JFrame {
+    private SudokuBoard board;
+    
+    public SudokuGUI(SudokuBoard board) {
+        this.board = board;
+        setTitle("Sudoku Game");
+        setSize(500, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(9, 9));
+
+        createBoard();
+        setVisible(true);
+    }
+
+    private void createBoard() {
+        Cell[][] grid = board.getBoard();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                JTextField field = new JTextField();
+                field.setHorizontalAlignment(JTextField.CENTER);
+                if (grid[i][j].isFixed()) {
+                    field.setText(String.valueOf(grid[i][j].getValue()));
+                    field.setEditable(false);
+                }
+                add(field);
+            }
+        }
+    }
+}
